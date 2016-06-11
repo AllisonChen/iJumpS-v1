@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cam View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" userLabel="Cam View Controller" customClass="ViewController" customModule="iJumpS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LCU-Bq-hhg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Myx-V2-VGl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJ7-Jq-dVS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nN-lk-uog" customClass="AVCamPreviewView" customModule="iJumpS" customModuleProvider="target">
+                                <rect key="frame" x="-14" y="-5" width="630" height="605"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj1-9G-vwL">
+                                        <rect key="frame" x="277" y="503" width="64" height="64"/>
+                                        <state key="normal" image="opening-aperture.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="snapStillImage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="osp-gP-i9e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="meX-Fp-zCX">
+                                        <rect key="frame" x="165" y="519" width="32" height="32"/>
+                                        <state key="normal" image="video-camera.png">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleMovieRecord:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n2u-DA-s2e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDP-XZ-f0l" userLabel="Settings Button">
+                                        <rect key="frame" x="519" y="519" width="32" height="32"/>
+                                        <state key="normal" image="settings.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02i-Lm-pY6">
+                                        <rect key="frame" x="416" y="519" width="32" height="32"/>
+                                        <state key="normal" image="reverse-camera.png">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WsJ-Qv-rwF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Au6-Hf-7T3" userLabel="Photo Button">
+                                        <rect key="frame" x="58" y="519" width="32" height="32"/>
+                                        <state key="normal" image="picture.png"/>
+                                        <connections>
+                                            <action selector="photoAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d3L-jB-fCE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IUu-HK-WYM" appends="YES" id="7UD-by-v89"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="5nN-lk-uog" secondAttribute="bottom" id="Fiw-NP-1nE"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="bottom" secondItem="Myx-V2-VGl" secondAttribute="top" id="ILf-y1-suQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5nN-lk-uog" secondAttribute="trailing" constant="-36" id="L7J-z9-Pop"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="top" secondItem="cJ7-Jq-dVS" secondAttribute="topMargin" constant="-5" id="MAB-ef-d33"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="leading" secondItem="cJ7-Jq-dVS" secondAttribute="leadingMargin" constant="-34" id="MTK-rq-fbi"/>
+                            <constraint firstAttribute="trailing" secondItem="5nN-lk-uog" secondAttribute="trailing" constant="-16" id="Roy-po-5z7"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="top" secondItem="cJ7-Jq-dVS" secondAttribute="topMargin" constant="-5" id="ZYG-OC-fq3"/>
+                            <constraint firstItem="5nN-lk-uog" firstAttribute="leading" secondItem="cJ7-Jq-dVS" secondAttribute="leading" constant="-14" id="l8f-Yu-g0g"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ILf-y1-suQ"/>
+                                <exclude reference="L7J-z9-Pop"/>
+                                <exclude reference="MTK-rq-fbi"/>
+                                <exclude reference="ZYG-OC-fq3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Fiw-NP-1nE"/>
+                                <include reference="ILf-y1-suQ"/>
+                                <include reference="L7J-z9-Pop"/>
+                                <exclude reference="MAB-ef-d33"/>
+                                <include reference="MTK-rq-fbi"/>
+                                <exclude reference="Roy-po-5z7"/>
+                                <include reference="ZYG-OC-fq3"/>
+                                <exclude reference="l8f-Yu-g0g"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="02i-Lm-pY6" id="e4r-oT-VRd"/>
+                        <outlet property="photoButton" destination="Au6-Hf-7T3" id="8OE-a6-PHL"/>
+                        <outlet property="previewView" destination="5nN-lk-uog" id="bNB-jw-EGF"/>
+                        <outlet property="recordButton" destination="meX-Fp-zCX" id="jat-5T-S61"/>
+                        <outlet property="settingsButton" destination="YDP-XZ-f0l" id="cmF-2a-zTS"/>
+                        <outlet property="snapButton" destination="gj1-9G-vwL" id="67d-Ml-x4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IUu-HK-WYM">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="vXZ-lx-hvc" id="Yos-QI-xsw"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="144.375" y="391.9014084507042"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="opening-aperture.png" width="64" height="64"/>
+        <image name="picture.png" width="32" height="32"/>
+        <image name="reverse-camera.png" width="32" height="32"/>
+        <image name="settings.png" width="32" height="32"/>
+        <image name="video-camera.png" width="32" height="32"/>
+    </resources>
+</document>
