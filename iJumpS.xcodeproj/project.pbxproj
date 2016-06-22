@@ -19,6 +19,9 @@
 		CB952BC91A0F657800559378 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB952BC71A0F657800559378 /* LaunchScreen.xib */; };
 		CB952BD51A0F657800559378 /* iJumpSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB952BD41A0F657800559378 /* iJumpSTests.swift */; };
 		CBA6B5DC1A1ACE1400B5DF1B /* AVCamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6B5DB1A1ACE1400B5DF1B /* AVCamPreviewView.swift */; };
+		EF93FFBD1D0D84E100B039E3 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF93FFBC1D0D84E100B039E3 /* Definitions.swift */; };
+		EFAF1C631D0F96E800382D31 /* JumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAF1C621D0F96E800382D31 /* JumpViewController.swift */; };
+		EFAF1C651D0FB1BB00382D31 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAF1C641D0FB1BB00382D31 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		CB952BD31A0F657800559378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB952BD41A0F657800559378 /* iJumpSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iJumpSTests.swift; sourceTree = "<group>"; };
 		CBA6B5DB1A1ACE1400B5DF1B /* AVCamPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCamPreviewView.swift; sourceTree = "<group>"; };
+		EF93FFBC1D0D84E100B039E3 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+		EFAF1C621D0F96E800382D31 /* JumpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpViewController.swift; sourceTree = "<group>"; };
+		EFAF1C641D0FB1BB00382D31 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAF1C651D0FB1BB00382D31 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +78,7 @@
 		CB952BB01A0F657800559378 = {
 			isa = PBXGroup;
 			children = (
+				EFAF1C641D0FB1BB00382D31 /* CoreBluetooth.framework */,
 				CB952BBB1A0F657800559378 /* iJunpS */,
 				CB952BD11A0F657800559378 /* iJumpSTests */,
 				CB952BBA1A0F657800559378 /* Products */,
@@ -92,6 +100,8 @@
 				CB952BBE1A0F657800559378 /* AppDelegate.swift */,
 				CBA6B5DB1A1ACE1400B5DF1B /* AVCamPreviewView.swift */,
 				CB952BC01A0F657800559378 /* ViewController.swift */,
+				EFAF1C621D0F96E800382D31 /* JumpViewController.swift */,
+				EF93FFBC1D0D84E100B039E3 /* Definitions.swift */,
 				CB952BC21A0F657800559378 /* Main.storyboard */,
 				CB952BC51A0F657800559378 /* Images.xcassets */,
 				CB952BC71A0F657800559378 /* LaunchScreen.xib */,
@@ -183,7 +193,7 @@
 				TargetAttributes = {
 					CB952BB81A0F657800559378 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 79NFUR6WWD;
+						DevelopmentTeam = 5Z2USGY9QY;
 					};
 					CB952BCD1A0F657800559378 = {
 						CreatedOnToolsVersion = 6.1;
@@ -240,9 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF93FFBD1D0D84E100B039E3 /* Definitions.swift in Sources */,
 				CB952BC11A0F657800559378 /* ViewController.swift in Sources */,
 				CBA6B5DC1A1ACE1400B5DF1B /* AVCamPreviewView.swift in Sources */,
 				CB952BBF1A0F657800559378 /* AppDelegate.swift in Sources */,
+				EFAF1C631D0F96E800382D31 /* JumpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +384,7 @@
 				INFOPLIST_FILE = AVCamSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nccucs;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.nccu.suwenyu.blt;
 				PRODUCT_NAME = iJumpS;
 				PROVISIONING_PROFILE = "";
 			};
@@ -387,7 +399,7 @@
 				INFOPLIST_FILE = AVCamSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nccucs;
+				PRODUCT_BUNDLE_IDENTIFIER = cs.nccu.suwenyu.blt;
 				PRODUCT_NAME = iJumpS;
 				PROVISIONING_PROFILE = "";
 			};
